@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="Images/Client1_LogoPalette2_014038.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bloom Valley</title>
+  </head>
+  <body>
+    <nav>
+      <img
+        class="logo"
+        src="Images/Client1_LogoPalette2_014038.png"
+        alt="logo"
+      />
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about-us.html">About Us</a>
+      <a href="custom-order.html">Custom</a>
+    </nav>
+
+    <section id="about" class="section">
+      <h2>About Us</h2>
+
+      <p>
+        <b>We are Bloom Valley </b>, a creative-driven brand dedicated to
+        showcasing captivating visuals and thoughtfully crafted custom
+        creations. Our mission is to transform ideas into visually compelling
+        experiences that inspire, engage, and leave a lasting impression. At
+        Bloom Valley, we blend artistry with precision—curating designs that
+        reflect elegance, originality, and purpose. From bespoke visual concepts
+        to refined creative solutions, every project is approached with
+        strategic intent and attention to detail. We believe great visuals tell
+        powerful stories. That’s why we focus on delivering creations that not
+        only look beautiful but also communicate meaning, evoke emotion, and
+        elevate brand identity. Our commitment is to quality, creativity, and
+        consistency—ensuring each creation reflects the unique vision of our
+        clients. Bloom Valley is where creativity blossoms into impact.
+      </p>
+    </section>
+
+    <!-- Action Buttons -->
+    <section class="actions">
+      <div id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" required /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="subject">Subject:</label><br />
+          <input type="text" id="subject" name="subject" /><br /><br />
+
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="5" required></textarea
+          ><br /><br />
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div>
+        <input
+          type="email"
+          name="subs"
+          id="subscribe"
+          placeholder="Enter your email"
+        />
+        <button>Subscribe</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; Bloom Valley 2026</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://twitter.com" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://linkedin.com" target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>

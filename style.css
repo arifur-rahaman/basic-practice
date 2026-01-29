@@ -1,0 +1,376 @@
+/* =========================
+   Global Reset & Variables
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Color Palette (Palette 2) */
+:root {
+  --canopy-green: #014038;
+  --meadow-mist: #96baa0;
+  --sky-bloom: #bdd4da;
+  --sunlit-petal: #f0c06d;
+  --cloudy-gray: #f7f7f7;
+  --text-green: #00231c;
+}
+
+/* =========================
+   Base Styles
+========================= */
+body {
+  font-family: Calibri, Arial, sans-serif;
+  color: var(--text-green);
+  background-color: var(--cloudy-gray);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--canopy-green);
+  font-weight: 600;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  background-color: var(--cloudy-gray);
+  border-bottom: 2px solid var(--meadow-mist);
+}
+
+.navbar nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .logo {
+  width: 55px;
+  margin-right: auto;
+}
+
+.navbar a:hover {
+  color: var(--sunlit-petal);
+}
+
+/* =========================
+   Shared Page Nav bar
+========================= */
+
+nav {
+  background-color: var(--cloudy-gray);
+  border-bottom: 2px solid var(--meadow-mist);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+}
+
+nav .logo {
+  width: 55px;
+  margin-right: auto;
+}
+
+nav a:hover {
+  color: var(--sunlit-petal);
+}
+
+/* =========================
+   Shared Page Sections
+========================= */
+.section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  font-family: Arial, sans-serif;
+  color: var(--canopy-green);
+  margin-bottom: 20px;
+}
+
+/* =========================
+   Main Container
+========================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.hero h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(1, 64, 56, 0.85);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   Gallery Section
+========================= */
+.grid {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  color: var(--canopy-green);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   Actions Section
+========================= */
+.actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h2 {
+  margin-bottom: 15px;
+  color: var(--canopy-green);
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--meadow-mist);
+  font-family: Calibri, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--canopy-green);
+}
+
+/* Buttons */
+button {
+  background-color: var(--canopy-green);
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: var(--sunlit-petal);
+  color: var(--text-green);
+}
+
+/* Subscribe Box */
+.actions > div:last-child {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* =========================
+   Gallery Page
+========================= */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid div {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--cloudy-gray);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-grid div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   About Us Page
+========================= */
+#about p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-green);
+}
+
+/* =========================
+   Custom Order Page
+========================= */
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.custom-grid div {
+  background-color: var(--cloudy-gray);
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.custom-grid img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.custom-grid button {
+  width: 100%;
+}
+
+/* =========================
+   Footer
+========================= */
+/* .footer {
+  background-color: var(--canopy-green);
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  margin: 0 8px;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  color: var(--sunlit-petal);
+} */
+
+/* =========================
+   Shared Footer Styling
+========================= */
+footer {
+  background-color: var(--canopy-green);
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 60px;
+}
+
+footer p {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer .social-icons a {
+  color: #ffffff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: var(--sunlit-petal);
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 1.2rem;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+}
