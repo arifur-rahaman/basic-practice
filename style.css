@@ -41,32 +41,6 @@ a {
 /* =========================
    Navbar
 ========================= */
-.navbar {
-  background-color: var(--cloudy-gray);
-  border-bottom: 2px solid var(--meadow-mist);
-}
-
-.navbar nav {
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.navbar .logo {
-  width: 55px;
-  margin-right: auto;
-}
-
-.navbar a:hover {
-  color: var(--sunlit-petal);
-}
-
-/* =========================
-   Shared Page Nav bar
-========================= */
 
 nav {
   background-color: var(--cloudy-gray);

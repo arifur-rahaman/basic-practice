@@ -25,52 +25,54 @@
       <a href="custom-order.html">Custom</a>
     </nav>
 
-    <section id="custom" class="section">
-      <h2>Custom Order</h2>
-      <div class="custom-grid">
-        <div>
-          <img src="Images/Client1_AppleTree.png" alt="Custom Image 1" />
-          <button>Order</button>
+    <main class="container">
+      <section id="custom" class="section">
+        <h2>Custom Order</h2>
+        <div class="custom-grid">
+          <div>
+            <img src="Images/Client1_AppleTree.png" alt="Custom Image 1" />
+            <button>Order</button>
+          </div>
+          <div>
+            <img src="Images/Client1_MapleTree.png" alt="Custom Image 2" />
+            <button>Order</button>
+          </div>
         </div>
-        <div>
-          <img src="Images/Client1_MapleTree.png" alt="Custom Image 2" />
-          <button>Order</button>
+      </section>
+
+      <!-- Action Buttons -->
+      <section class="actions">
+        <div id="contact" class="contact-form">
+          <h2>Contact Us</h2>
+          <form action="submit_form.php" method="post">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" required /><br /><br />
+
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <label for="subject">Subject:</label><br />
+            <input type="text" id="subject" name="subject" /><br /><br />
+
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" rows="5" required></textarea
+            ><br /><br />
+
+            <button type="submit">Send Message</button>
+          </form>
         </div>
-      </div>
-    </section>
 
-    <!-- Action Buttons -->
-    <section class="actions">
-      <div id="contact" class="contact-form">
-        <h2>Contact Us</h2>
-        <form action="submit_form.php" method="post">
-          <label for="name">Name:</label><br />
-          <input type="text" id="name" name="name" required /><br /><br />
-
-          <label for="email">Email:</label><br />
-          <input type="email" id="email" name="email" required /><br /><br />
-
-          <label for="subject">Subject:</label><br />
-          <input type="text" id="subject" name="subject" /><br /><br />
-
-          <label for="message">Message:</label><br />
-          <textarea id="message" name="message" rows="5" required></textarea
-          ><br /><br />
-
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-
-      <div>
-        <input
-          type="email"
-          name="subs"
-          id="subscribe"
-          placeholder="Enter your email"
-        />
-        <button>Subscribe</button>
-      </div>
-    </section>
+        <div>
+          <input
+            type="email"
+            name="subs"
+            id="subscribe"
+            placeholder="Enter your email"
+          />
+          <button>Subscribe</button>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; Bloom Valley 2026</p>
