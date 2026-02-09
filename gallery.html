@@ -28,17 +28,88 @@
       <section id="gallery" class="section">
         <h2>Gallery</h2>
         <div class="gallery-grid">
-          <div><img src="Images/Client1_AloePlant.png" alt="Image 1" /></div>
-          <div><img src="Images/Client1_AppleTree.png" alt="Image 2" /></div>
-          <div><img src="Images/Client1_BirchTree.png" alt="Image 3" /></div>
-          <div><img src="Images/Client1_BirdHouse.png" alt="Image 4" /></div>
-          <div><img src="Images/Client1_MapleTree.png" alt="Image 5" /></div>
-          <div><img src="Images/Client1_PottingSoil.png" alt="Image 6" /></div>
-          <div><img src="Images/Client1_SpiderPlant.png" alt="Image 7" /></div>
-          <div>
-            <img src="Images/Client1_StringofPearls.png" alt="Image 8" />
+          <div class="gallery-item">
+            <img src="Images/Client1_AloePlant.png" alt="Aloe Plant" />
+            <button class="add-to-cart" data-item="Aloe Plant">
+              Add to Cart
+            </button>
           </div>
-          <div><img src="Images/Client1_WateringCan.png" alt="Image 9" /></div>
+
+          <div class="gallery-item">
+            <img src="Images/Client1_AppleTree.png" alt="Apple Tree" />
+            <button class="add-to-cart" data-item="Apple Tree">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="gallery-item">
+            <img src="Images/Client1_BirchTree.png" alt="Birch Tree" />
+            <button class="add-to-cart" data-item="Birch Tree">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="gallery-item">
+            <img src="Images/Client1_BirdHouse.png" alt="Bird House" />
+            <button class="add-to-cart" data-item="Bird House">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="gallery-item">
+            <img src="Images/Client1_MapleTree.png" alt="Maple Tree" />
+            <button class="add-to-cart" data-item="Maple Tree">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="gallery-item">
+            <img src="Images/Client1_PottingSoil.png" alt="Potting Soil" />
+            <button class="add-to-cart" data-item="Potting Soil">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="gallery-item">
+            <img src="Images/Client1_SpiderPlant.png" alt="Spider Plant" />
+            <button class="add-to-cart" data-item="Spider Plant">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="Images/Client1_StringofPearls.png"
+              alt="String of Pearls"
+            />
+            <button class="add-to-cart" data-item="String of Pearls">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="gallery-item">
+            <img src="Images/Client1_WateringCan.png" alt="Watering Can" />
+            <button class="add-to-cart" data-item="Watering Can">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- View Cart Button -->
+        <button id="view-cart-btn" style="margin-top: 20px">View Cart</button>
+
+        <!-- Cart Modal -->
+        <div id="cart-modal" class="cart-modal">
+          <div class="cart-content">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+
+            <div class="cart-actions">
+              <button onclick="processOrder()">Process Order</button>
+              <button onclick="clearCart()">Clear Cart</button>
+              <button onclick="closeCart()">Close</button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -46,7 +117,7 @@
       <section class="actions">
         <div id="contact" class="contact-form">
           <h2>Contact Us</h2>
-          <form action="submit_form.php" method="post">
+          <form id="contact-form" action="submit_form.php" method="post">
             <label for="name">Name:</label><br />
             <input type="text" id="name" name="name" required /><br /><br />
 
@@ -63,20 +134,32 @@
             <button type="submit">Send Message</button>
           </form>
         </div>
-        <div class="subscribe-box">
+      </section>
+    </main>
+
+    <!-- footer -->
+
+    <footer class="footer">
+      <p>© Bloom Valley 2026</p>
+
+      <!-- Subscribe Box -->
+      <form class="subscribe-box" novalidate>
+        <div class="subscribe-field">
           <input
             type="email"
             name="subs"
             id="subscribe"
             placeholder="Enter your email"
+            required
           />
-          <button>Subscribe</button>
+          <span class="tooltip"
+            >Please enter a valid email (example@domain.com)</span
+          >
         </div>
-      </section>
-    </main>
 
-    <footer>
-      <p>&copy; Bloom Valley 2026</p>
+        <button type="button" class="subscribe-btn">Subscribe</button>
+      </form>
+
       <div class="social-icons">
         <a href="https://facebook.com" target="_blank"
           ><i class="fab fa-facebook-f"></i
@@ -92,5 +175,7 @@
         ></a>
       </div>
     </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>

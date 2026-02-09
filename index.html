@@ -57,6 +57,12 @@
           <div class="card">
             <img src="Images/Client1_MapleTree.png" alt="Image" />
           </div>
+          <div class="card">
+            <img src="Images/Client1_BirdHouse.png" alt="Image" />
+          </div>
+          <div class="card">
+            <img src="Images/Client1_SpiderPlant.png" alt="Image" />
+          </div>
         </div>
       </section>
 
@@ -65,7 +71,7 @@
         <!-- Contact Form -->
         <div id="contact" class="contact-form">
           <h2>Contact Us</h2>
-          <form action="submit_form.php" method="post">
+          <form id="contact-form" action="submit_form.php" method="post">
             <label for="name">Name:</label><br />
             <input type="text" id="name" name="name" required /><br /><br />
 
@@ -82,38 +88,48 @@
             <button type="submit">Send Message</button>
           </form>
         </div>
+      </section>
+    </main>
 
-        <!-- Subscribe Box -->
-        <div class="subscribe-box">
+    <!-- footer -->
+
+    <footer class="footer">
+      <p>© Bloom Valley 2026</p>
+
+      <!-- Subscribe Box -->
+      <form class="subscribe-box" novalidate>
+        <div class="subscribe-field">
           <input
             type="email"
             name="subs"
             id="subscribe"
             placeholder="Enter your email"
+            required
           />
-          <button>Subscribe</button>
+          <span class="tooltip"
+            >Please enter a valid email (example@domain.com)</span
+          >
         </div>
-      </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>© Bloom Valley 2026</p>
+        <button type="button" class="subscribe-btn">Subscribe</button>
+      </form>
 
       <div class="social-icons">
-        <a href="https://facebook.com" target="_blank">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://twitter.com" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://instagram.com" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://linkedin.com" target="_blank">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
+        <a href="https://facebook.com" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://twitter.com" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://linkedin.com" target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
       </div>
     </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>

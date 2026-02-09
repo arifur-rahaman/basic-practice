@@ -31,11 +31,15 @@
         <div class="custom-grid">
           <div>
             <img src="Images/Client1_AppleTree.png" alt="Custom Image 1" />
-            <button>Order</button>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="clear-cart">Clear Cart</button>
+            <button class="process-order">Process Order</button>
           </div>
           <div>
             <img src="Images/Client1_MapleTree.png" alt="Custom Image 2" />
-            <button>Order</button>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="clear-cart">Clear Cart</button>
+            <button class="process-order">Process Order</button>
           </div>
         </div>
       </section>
@@ -44,7 +48,7 @@
       <section class="actions">
         <div id="contact" class="contact-form">
           <h2>Contact Us</h2>
-          <form action="submit_form.php" method="post">
+          <form id="contact-form" action="submit_form.php" method="post">
             <label for="name">Name:</label><br />
             <input type="text" id="name" name="name" required /><br /><br />
 
@@ -61,21 +65,32 @@
             <button type="submit">Send Message</button>
           </form>
         </div>
+      </section>
+    </main>
 
-        <div>
+    <!-- footer -->
+
+    <footer class="footer">
+      <p>© Bloom Valley 2026</p>
+
+      <!-- Subscribe Box -->
+      <form class="subscribe-box" novalidate>
+        <div class="subscribe-field">
           <input
             type="email"
             name="subs"
             id="subscribe"
             placeholder="Enter your email"
+            required
           />
-          <button>Subscribe</button>
+          <span class="tooltip"
+            >Please enter a valid email (example@domain.com)</span
+          >
         </div>
-      </section>
-    </main>
 
-    <footer>
-      <p>&copy; Bloom Valley 2026</p>
+        <button type="button" class="subscribe-btn">Subscribe</button>
+      </form>
+
       <div class="social-icons">
         <a href="https://facebook.com" target="_blank"
           ><i class="fab fa-facebook-f"></i
@@ -91,5 +106,7 @@
         ></a>
       </div>
     </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>

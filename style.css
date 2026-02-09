@@ -124,6 +124,17 @@ nav a:hover {
   color: var(--canopy-green);
 }
 
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery-item button {
+  margin-top: auto;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -276,6 +287,52 @@ button:hover {
 }
 
 /* =========================
+   CART MODAL
+========================= */
+.cart-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-content {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cart-content h2 {
+  margin-bottom: 15px;
+  color: var(--canopy-green);
+}
+
+#cart-items {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+#cart-items li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--meadow-mist);
+}
+
+.cart-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cart-actions button {
+  flex: 1;
+}
+
+/* =========================
    Footer
 ========================= */
 
@@ -312,6 +369,58 @@ footer .social-icons a {
 
 footer .social-icons a:hover {
   color: var(--sunlit-petal);
+}
+
+/* =========================
+   SUBSCRIBE (FOOTER)
+========================= */
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscribe-field {
+  position: relative;
+}
+
+.subscribe-box input {
+  width: 260px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--meadow-mist);
+}
+
+.subscribe-box input.invalid {
+  border-color: #d9534f;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  background-color: #d9534f;
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 5px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  display: none;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 12px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #d9534f transparent;
+}
+
+/* Show tooltip */
+.subscribe-field.show-tooltip .tooltip {
+  display: block;
 }
 
 /* =========================
@@ -380,6 +489,18 @@ footer .social-icons a:hover {
   .actions {
     grid-template-columns: 1fr;
     gap: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .subscribe-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .subscribe-box input {
+    width: 100%;
   }
 }
 
